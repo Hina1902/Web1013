@@ -1,0 +1,151 @@
+    
+/* Reset toàn bộ phần margin, padding và thiết lập box-sizing để dễ quản lý layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+header {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Logo của trang web */
+header .logo h1 a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+/* Thanh điều hướng (menu) */
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+/* Các mục trong menu */
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+/* Hiệu ứng khi di chuột vào menu */
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Container chứa sidebar và nội dung chính */
+.container {
+    display: flex;
+    margin: 2rem;
+    gap: 2rem;
+}
+/* Sidebar (Thanh bên trái) */
+.sidebar {
+    width: 20%;
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+}
+/* Danh sách thể loại trong sidebar */
+.sidebar ul {
+    list-style: none;
+}
+/* Các mục trong sidebar */
+.sidebar ul li {
+    margin-bottom: 1rem;
+}
+/* Link trong sidebar */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+/* Hiệu ứng khi di chuột vào mục trong sidebar */
+.sidebar ul li a:hover {
+    color: #FFD700;
+}
+
+
+main {
+    flex-grow: 1;
+}
+/* Phần tiêu đề của danh sách manga */
+.manga-grid {
+    text-align: center;
+}
+
+.manga-grid h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+/* Lưới hiển thị manga */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.manga-item { 
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+/* Hiệu ứng khi di chuột vào mục manga */
+.manga-item:hover {
+    transform: scale(1.05);
+}
+
+.manga-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.manga-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+/* Tác giả manga */
+.manga-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1c1c1c;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+/* Loại bỏ gạch chân và thiết lập màu chữ mặc định cho link trong manga item */
+.manga-item a{
+    text-decoration: none;
+    color:black;
+}
+
